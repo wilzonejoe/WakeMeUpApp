@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WakeMeUpApp.MainPage"
+             Padding="10">
+
+    <StackLayout Orientation="Vertical">
+        <Label x:Name="MainLabel"
+               Text="Welcome to Xamarin Forms!"
+               HorizontalTextAlignment="Center" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button
+                x:Name="AddButton"
+                Text="Add 1 Hour"
+                Clicked="AddButton_OnClicked" />
+
+            <Button
+                x:Name="SubtractButton"
+                Text="Subtract 1 Hour"
+                Clicked="SubtractButton_OnClicked" />
+
+          <Button
+              x:Name="PlusButton"
+              Text="1++"
+              Clicked="PlusButton_OnClicked" />
+        </StackLayout>
+        <Label x:Name="MainLabel2"
+               Text="Welcome to Xamarin Forms!"
+               HorizontalTextAlignment="Center" />
+        <ListView x:Name="TimeList"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Hour}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
